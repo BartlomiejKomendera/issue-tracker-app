@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this.login.authenticate(this.userData.username, this.userData.password)
     .subscribe(data => {
       localStorage.setItem("token", data.jwt)
-      //this.router.navigate(['/home'])
+      this.router.navigate(['/home'])
       console.log(data)
     });
   }

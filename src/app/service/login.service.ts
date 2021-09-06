@@ -14,7 +14,6 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   authenticate(username: string, password: string){
-    console.log("inside service");
     
     const user = {username, password};
     const body = JSON.stringify(user);
@@ -22,9 +21,7 @@ export class LoginService {
       "Content-Type": "application/json"
     });
     
-    console.log("data: " + user.username + " | " + user.password);
     return this.http.post<any>("http://localhost:8080/authenticate", body, {headers: headers});
-    
   }
 
   isLoggedIn(){

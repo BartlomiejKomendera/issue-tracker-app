@@ -12,11 +12,11 @@ export class HomeGuard implements CanActivate {
   constructor(private login: LoginService, private router: Router){}
 
   canActivate() {
-    console.log('homeGuard working')
     if (!this.login.isLoggedIn()) {
-      this.router.navigate(['/login'])
+      this.router.navigate(['/login']);
+      return false;
     }
-    return !this.login.isLoggedIn();
+    return this.login.isLoggedIn();
   }
   
 }
