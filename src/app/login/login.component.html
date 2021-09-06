@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row mt-5 mb-5 text-center">
+    </div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-md-12">
+            <div class="card rounded-0">
+                <div class="card-body">
+                    <form #loginForm="ngForm" (submit)="submit(loginForm.value)">
+
+                        <div class="mb-3">
+
+                            <label for="username" class="form-label">Username</label>
+                            <input ngModel name="username" type="text" class="form-control rounded-0" id="username" aria-describedby="userHelp">
+
+                            <div id="userHelp" class="form-text">Contact the administrator for access.</div>
+                        </div>
+                        <div class="mb-3">
+
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input ngModel name="password" type="password" class="form-control rounded-0" id="password">
+
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-dark rounded-0" type="submit">Log In</button>
+                          </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
