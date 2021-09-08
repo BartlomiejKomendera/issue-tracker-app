@@ -1,3 +1,11 @@
+import { LoginComponent } from "src/app/login/login.component";
+
 export interface Issue {
+    id: number;
     title: string;
+    department: string;
+    status: string;
+    severity: string;
+    ceratedBy: string;
+    creationDate: string;
 }
