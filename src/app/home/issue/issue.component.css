@@ -1,0 +1,13 @@
+.element{
+    margin: 2px;
+}
+.element-hover{
+    cursor: pointer;
+    /*background-color: rgb(239, 246, 248);*/
+    box-shadow: 1px 1px 8px #888888;
+    margin: 2px;
+}
+.element-closed{
+    background-color: rgb(243, 243, 243);
+    color: gray;
+}

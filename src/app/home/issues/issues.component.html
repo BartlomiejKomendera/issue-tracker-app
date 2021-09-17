@@ -1,1 +1,12 @@
-<app-issue *ngFor='let issue of issues' [issue]='issue'></app-issue>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3"></div>
+        <div *ngIf="!openIssue" class="col-6">
+            <app-issue (click)="changeOpenIssueFlag(issue)" *ngFor='let issue of issues' [issue]='issue'></app-issue>
+        </div>
+        <div *ngIf="openIssue" class="col-6">
+            <app-opened-issue [currentIssue]="currentIssue"></app-opened-issue>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

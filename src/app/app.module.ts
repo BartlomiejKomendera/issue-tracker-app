@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { IssuesComponent } from './home/issues/issues.component';
 import { IssueComponent } from './home/issue/issue.component';
 import { AuthInterceptorService } from './service/auth-interceptor.service';
+import { TaskbarComponent } from './home/navbar/navbar.component';
+import { OpenedIssueComponent } from './home/opened-issue/opened-issue.component';
+import { EditIssueComponent } from './home/edit-issue/edit-issue.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { AuthInterceptorService } from './service/auth-interceptor.service';
     LoginComponent,
     HomeComponent,
     IssuesComponent,
-    IssueComponent
+    IssueComponent,
+    TaskbarComponent,
+    OpenedIssueComponent,
+    EditIssueComponent
   ],
   imports: [
     BrowserModule,

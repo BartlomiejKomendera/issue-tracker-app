@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IssueService } from 'src/app/service/issue.service';
 import { Issue } from '../issue/Issue';
 
 @Component({
@@ -9,6 +10,8 @@ import { Issue } from '../issue/Issue';
 export class IssueComponent implements OnInit {
   @Input()
   issue!: Issue;
+  changeStyle:boolean = false;
+  severityColor:string = '';
 
   constructor() { }
 
