@@ -1,17 +1,13 @@
 <div class="container">
     <div class="row" (mouseover)="changeStyle=true" (mouseout)="changeStyle=false">
-        <!--<span [ngStyle]="{'border-color': 
-        (issue.status === 'Open') ? 'rgb(37, 37, 37)' :
-        (issue.status === 'Closed') ? 'rgb(37, 37, 37)' : ''}" 
-        [class.element-enhanced]='changeStyle' [class.element]='!changeStyle'>-->
-        <div class="card" [class.element]="!changeStyle" [class.element-hover]="changeStyle" [class.element-closed]="issue.status === 'Closed'">
+        <div class="card" [class.element]="!changeStyle" 
+        [class.element-hover]="changeStyle" [class.element-closed]="issue.status === 'Closed'">
             <div class="card-body">
                 <div class="row">
                     <div class="col">
                         <h5>{{issue.title}}</h5>
                     </div>
-                    <div class="col"><i class="fa fa-angle-double-down fa-lg" aria-hidden="true"
-                            style="float: right;"></i></div>
+                    <div class="col"></div>
                 </div>
                 <div class="row">
                     <div class="col">

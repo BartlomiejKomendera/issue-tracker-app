@@ -13,6 +13,7 @@ import { AuthInterceptorService } from './service/auth-interceptor.service';
 import { TaskbarComponent } from './home/navbar/navbar.component';
 import { OpenedIssueComponent } from './home/opened-issue/opened-issue.component';
 import { EditIssueComponent } from './home/edit-issue/edit-issue.component';
+import { NewIssueComponent } from './home/new-issue/new-issue.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EditIssueComponent } from './home/edit-issue/edit-issue.component';
     IssueComponent,
     TaskbarComponent,
     OpenedIssueComponent,
-    EditIssueComponent
+    EditIssueComponent,
+    NewIssueComponent
   ],
   imports: [
     BrowserModule,

@@ -15,11 +15,17 @@ export class OpenedIssueComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('opened issue works: ' + this.currentIssue.title)
+    console.log('title: ' + this.currentIssue.title);
+    console.log('createdBy: ' + this.currentIssue.createdBy);
+    console.log('creationDate: ' + this.currentIssue.creationDate);
   }
 
   editIssue() {
     this.edit = true;
+  }
+
+  back(){
+    location.assign("http://localhost:4200/home");
   }
 
 }

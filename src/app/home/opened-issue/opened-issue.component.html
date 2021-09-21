@@ -1,15 +1,25 @@
 <div class="container">
+  <div class="row">
+    <div class="col-9"></div>
+    <div class="col-3">
+      <button (click)="back()" class="btn btn-outline-primary m-2 float-end">Back</button>
+    </div>
+  </div>
   <div class="card">
     <div class="card-body">
 
       <form *ngIf="!edit">
         <div class="row">
-          <div class="col-10"></div>
-          <div class="col-2">
-            <button (click)="editIssue()" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit issue" class="btn float-end">
-              <i class="fa fa-edit fa-lg" aria-hidden="true"></i></button>
+          <div class="col">
+            <button (click)="editIssue()" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit issue"
+          class="btn btn-outline-warning m-2 float-end">
+          Edit
+          <!--<i class="fa fa-edit fa-lg" aria-hidden="true"></i>-->
+        </button>
           </div>
+          
         </div>
+        
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
           <input type="text" class="form-control custom-class" id="title" value="{{currentIssue.title}}" disabled>
@@ -17,6 +27,20 @@
         <div class="mb-3">
           <label for="department" class="form-label">Department</label>
           <input type="text" class="form-control" id="department" value="{{currentIssue.department}}" disabled>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="createdBy" class="form-label">Created By</label>
+              <input type="text" class="form-control" id="createdBy" value="{{currentIssue.createdBy}}" disabled>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="creationDate" class="form-label">Creation Date</label>
+              <input type="text" class="form-control" id="creationDate" value="{{currentIssue.creationDate}}" disabled>
+            </div>
+          </div>
         </div>
         <div class="row">
           <div class="col">

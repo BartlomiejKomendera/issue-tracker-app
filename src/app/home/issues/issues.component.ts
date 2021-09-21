@@ -10,6 +10,7 @@ import { Issue } from '../issue/Issue';
 export class IssuesComponent implements OnInit {
   issues: Issue[] = [];
   openIssue: boolean = false;
+  newIssue: boolean = false;
   currentIssue!: Issue;
 
   constructor(private issueService: IssueService) { }
@@ -24,7 +25,11 @@ export class IssuesComponent implements OnInit {
     this.currentIssue = issue;
     this.openIssue = true;
 
-    console.log('openIssue works')
+    console.log('issue id: ' + this.currentIssue.id)
+  }
+
+  changeNewIssueFlag(){
+    this.newIssue = true;
   }
 
 }

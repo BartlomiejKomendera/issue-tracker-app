@@ -7,6 +7,15 @@ export interface Issue {
     department: string;
     status: string;
     severity: string;
-    ceratedBy: string;
+    createdBy: string;
     creationDate: string;
+}
+
+export interface IssueJson {
+    title: string;
+    description: string;
+    department: string;
+    status: string;
+    severity: string;
+    createdBy: string;
 }

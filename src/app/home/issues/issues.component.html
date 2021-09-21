@@ -1,12 +1,25 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-3"></div>
-        <div *ngIf="!openIssue" class="col-6">
+
+        <div *ngIf="!openIssue && !newIssue" class="col-6">
+            <div class="row">
+                <div class="col-9"></div>
+                <div class="col-3">
+                    <button (click)="changeNewIssueFlag()" class="btn btn-outline-primary mb-2 me-3 float-end">New Issue</button>
+                </div>
+            </div>
             <app-issue (click)="changeOpenIssueFlag(issue)" *ngFor='let issue of issues' [issue]='issue'></app-issue>
         </div>
+
         <div *ngIf="openIssue" class="col-6">
             <app-opened-issue [currentIssue]="currentIssue"></app-opened-issue>
         </div>
+
+        <div *ngIf="newIssue" class="col-6">
+            <app-new-issue></app-new-issue>
+        </div>
+        
         <div class="col-3"></div>
     </div>
 </div>
